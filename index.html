@@ -5,36 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ihsanedit Portfolio</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             text-align: center;
         }
+
         header {
             background-color: #333;
             color: white;
             padding: 20px;
             font-size: 24px;
         }
+
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+
         .video-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             padding: 20px;
         }
+
         video {
-            width: 45%;
+            width: 100%;
+            max-width: 480px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
+
         .about {
             background-color: white;
             padding: 20px;
@@ -42,11 +50,47 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         footer {
             background-color: #333;
             color: white;
             padding: 10px;
             margin-top: 20px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            video {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            header {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .video-container {
+                padding: 10px;
+            }
+
+            .about {
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -58,7 +102,7 @@
         <h2>Welcome to Ihsanedit Portfolio</h2>
         <p>Check out Ihsanedit latest work below.</p>
         <div class="video-container">
-            <video id="autoRunVideo" autoplay loop controls>
+            <video id="autoRunVideo" autoplay loop muted controls>
                 <source src="https://portfolio1-neon-ten.vercel.app/Portfoli222.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -69,11 +113,11 @@
         </div>
         <div class="about">
             <h3>About Me</h3>
-            <p>We are passionate Vedio editor who loves creating stunning and functional Vedio. Let’s work together!</p>
+            <p>We are passionate video editors who love creating stunning and functional videos. Let’s work together!</p>
         </div>
     </div>
     <footer>
-        &copy; 2025 Ihsanedit Portfolio | Designed with ihsan edit
+        &copy; 2025 Ihsanedit Portfolio | Designed with Ihsan Edit
     </footer>
     <script>
         document.getElementById("clickPlayVideo").addEventListener("click", function() {
